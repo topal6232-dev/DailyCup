@@ -1,0 +1,581 @@
+/*
+Theme Name: Reddy - Bootstrap 5 Online shop HTML CSS Template
+Theme URI: https://templatejungle.com/
+Author: TemplatesJungle
+Author URI: https://templatejungle.com/
+Description: Reddy - Bootstrap 5 Online shop HTML CSS Template is specially designed product packaged for Online shop by TemplatesJungle.
+Version: 1.1
+*/
+
+/*--------------------------------------------------------------
+This is main CSS file that contains custom style rules used in this template
+--------------------------------------------------------------*/
+
+/*------------------------------------*\
+    Table of contents
+\*------------------------------------*/
+
+/*------------------------------------------------
+CSS STRUCTURE:
+
+1. VARIABLES
+2. GENERAL TYPOGRAPHY
+
+--------------------------------------------------------------*/
+body {
+  --heading-font: "Montserrat", Roboto, sans-serif;
+  --heading-font-weight: 400;
+  --heading-color: #6B402A;               /* темно-коричневий для заголовків */
+  --heading-line-height: 1.24;
+  --swiper-theme-color: #A58C81;
+  --swiper-pagination-color: #A58C81;
+
+  /* bootstrap / coffee palette */
+  --bs-body-font-family: "Noto Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --bs-body-font-size: 16px;
+  --bs-body-font-weight: 300;
+  --bs-body-line-height: 1.5;
+  --bs-body-color: #2B2B2B;
+  --bs-body-color-rgb: 43, 43, 43;
+  --bs-body-bg-rgb: 251, 247, 242;
+  --bs-body-bg: #FBF7F3;                   /* світлий бежевий фон */
+
+  --bs-primary: #6B402A;                   /* головний коричневий */
+  --bs-secondary: #F3E9DE;                 /* бежевий акцент */
+  --bs-black: #000;
+  --bs-white: #ffffff;
+  --bs-light: #f8f8f8;
+  --bs-dark: #3B2F2F;
+  --bs-gray: #9aa1a7;
+  --bs-gray-100: #F8F8F8;
+  --bs-gray-200: #E8E6E1;
+  --bs-gray-300: #DCDAD4;
+  --bs-gray-800: #3D3A38;
+  --bs-orange: #F68A25;
+
+  --bs-primary-rgb: 107, 64, 42;
+  --bs-secondary-rgb: 243, 233, 222;
+  --bs-black-rgb: 17, 17, 17;
+  --bs-light-rgb: 241, 241, 240;
+  --bs-dark-rgb: 33, 37, 41;
+
+  --bs-link-color: #5B3A2A;                /* колір посилань */
+  --bs-link-color-rgb: 91, 58, 42;
+  --bs-link-decoration: none;
+  --bs-link-hover-color: #A58C81;          /* світліший при наведені */
+
+  --bs-border-color: #191919;
+  --bs-border-radius: 2rem;
+
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3Csymbol xmlns='http://www.w3.org/2000/svg' id='plus' viewBox='0 0 24 24'%3E%3Cpath fill='currentColor' d='M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z'/%3E%3C/symbol%3E");
+}
+
+body {
+  letter-spacing: 0.03rem;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: var(--heading-font);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height);
+}
+
+h1.light,
+.h1,
+h2.light,
+.h2,
+h3.light,
+.h3,
+h4.light,
+.h4,
+h5.light,
+.h5,
+h6.light,
+.h6 {
+  color: var(--bs-light);
+}
+
+h1,
+h2,
+h3 {
+  margin: 25px 0;
+}
+
+h5,
+h6 {
+  letter-spacing: 1px;
+}
+
+h1,
+.h1 {
+  font-size: 4.125rem;
+}
+
+h2,
+.h2 {
+  font-size: 3.6rem;
+}
+
+h3,
+.h3 {
+  font-size: 2.8rem;
+}
+
+h4,
+.h4 {
+  font-size: 1.8rem;
+}
+
+h5,
+.h5 {
+  font-size: 1.4rem;
+}
+
+h6,
+.h6 {
+  font-size: 1rem;
+}
+
+a {
+  color: var(--bs-link-color);
+  text-decoration: none;
+  transition: color .18s ease, text-decoration .18s ease, font-weight .12s ease;
+}
+
+/* hover/focus for links — робимо текст полужирним при наведені.
+   Також підсилюємо посилання всередині батьківських блоків при наведені на блок. */
+a:hover,
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--bs-link-hover-color);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Якщо потрібно, щоб при наведенні на батьківський елемент (параграф, li, картка тощо)
+   всі посилання всередині ставали полужирними: */
+p:hover a,
+li:hover a,
+.card:hover a,
+.icon-box-content:hover a,
+.featured-item:hover a,
+.display-header:hover a,
+.footer-bottom:hover a {
+  font-weight: 700;
+}
+
+/* container fluid */
+.container-fluid {
+  max-width: 1800px;
+}
+
+@media (min-width: 1600px) {
+.container, .container-lg {
+    max-width: 1530px;
+  }
+.container, .container-md {
+    max-width: 1200px;
+  }
+}
+
+/* list group */
+.list-group-item {
+  --bs-list-group-item-padding-x: 0;
+  --bs-list-group-border-width: 0;
+}
+
+/* btn */
+.btn {
+  --bs-btn-border-radius: 0;
+}
+
+.btn-primary {
+  --bs-btn-color: var(--bs-light);
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-color: var(--bs-light);
+  --bs-btn-hover-bg: var(--bs-dark);
+  --bs-btn-hover-border-color: var(--bs-dark);
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: var(--bs-light);
+  --bs-btn-active-bg: var(--bs-dark);
+  --bs-btn-active-border-color: var(--bs-dark);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: var(--bs-light);
+  --bs-btn-disabled-bg: var(--bs-primary);
+  --bs-btn-disabled-border-color: var(--bs-primary);
+}
+
+.btn-outline-dark.btn-bg-light {
+  --bs-btn-bg: var(--bs-light);
+}
+
+.btn-group-lg>.btn, .btn-lg {
+  --bs-btn-padding-y: 1rem;
+  --bs-btn-padding-x: 2.8rem;
+  --bs-btn-font-size: 1.25rem;
+}
+
+.btn.btn-shadow {
+  box-shadow: 0px 6px 39px 0px rgba(91, 45, 42, 0.20);
+}
+
+/* text white */
+.text-white {
+  --heading-color: var(--bs-light);
+  --bs-breadcrumb-item-active-color: var(--bs-light);
+  --bs-breadcrumb-divider-color: var(--bs-light);
+  --bs-link-color-rgb: var(--bs-light-rgb);
+  --bs-link-hover-color-rgb: var(--bs-light-rgb);
+}
+
+.text-white .nav-link {
+  --bs-nav-link-color: var(--bs-light);
+  --bs-nav-link-hover-color: var(--bs-light);
+  --bs-nav-link-active-color: var(--bs-light);
+  --bs-navbar-active-color: var(--bs-light);
+}
+
+/* open-up */
+.open-up {
+  clip-path: inset(48% 34% 36% 35%);
+}
+.aos-animate.open-up {
+  animation: 1s open-up forwards;
+}
+
+@keyframes open-up {
+  0% {
+    clip-path: inset(48% 34% 36% 35%);
+  }
+
+  100% {
+    clip-path: inset(0% 0% 0% 0%);
+  }
+}
+
+
+/* preloader */
+.preloader {
+  position: fixed;
+  z-index: 99;
+  background: var(--bs-dark);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.preloader.loaded {
+  height: 0;
+}
+
+/* navbar */
+.navbar.fixed-top {
+  transition: background-color 0.6s ease-out;
+}
+
+/* margin */
+.my-lg-6 {
+  margin-top: 4.5rem!important;
+  margin-bottom: 4.5rem!important;
+}
+.my-lg-7 {
+  margin-top: 6.5rem!important;
+  margin-bottom: 6.5rem!important;
+}
+.my-lg-8 {
+  margin-top: 8.5rem!important;
+  margin-bottom: 8rem!important;
+}
+.my-lg-9 {
+  margin-top: 10.5rem!important;
+  margin-bottom: 10rem!important;
+}
+.my-lg-10 {
+  margin-top: 12.5rem!important;
+  margin-bottom: 12.5rem!important;
+}
+.mt-lg-0 {
+  margin-top: 0rem!important;
+}
+.mb-lg-0 {
+  margin-bottom: 0rem!important;
+}
+
+/* padding top and bottom */
+.py-lg-6 {
+  padding-top: 4.5rem!important;
+  padding-bottom: 4.5rem!important;
+}
+.py-lg-7 {
+  padding-top: 6.5rem!important;
+  padding-bottom: 6.5rem!important;
+}
+.py-lg-8 {
+  padding-top: 8.5rem!important;
+  padding-bottom: 8rem!important;
+}
+.py-lg-9 {
+  padding-top: 10.5rem!important;
+  padding-bottom: 10.5rem!important;
+}
+.py-lg-10 {
+  padding-top: 12.5rem!important;
+  padding-bottom: 12.5rem!important;
+}
+.py-lg-11 {
+  padding-top: 14.5rem!important;
+  padding-bottom: 14.5rem!important;
+}
+.py-lg-12 {
+  padding-top: 16.5rem!important;
+  padding-bottom: 16.5rem!important;
+}
+
+/* padding left and right */
+.px-lg-6 {
+  padding-left: 4.5rem!important;
+  padding-right: 4.5rem!important;
+}
+.px-lg-7 {
+  padding-left: 6.5rem!important;
+  padding-right: 6.5rem!important;
+}
+.px-lg-8 {
+  padding-left: 8.5rem!important;
+  padding-right: 8rem!important;
+}
+.px-lg-9 {
+  padding-left: 10.5rem!important;
+  padding-right: 10.5rem!important;
+}
+.px-lg-10 {
+  padding-left: 12.5rem!important;
+  padding-right: 12.5rem!important;
+}
+.px-lg-11 {
+  padding-left: 14.5rem!important;
+  padding-right: 14.5rem!important;
+}
+.px-lg-12 {
+  padding-left: 16.5rem!important;
+  padding-right: 16.5rem!important;
+}
+
+/* padding none */
+.pt-lg-0 {
+  padding-top: 0rem!important;
+}
+.pb-lg-0 {
+  padding-bottom: 0rem!important;
+}
+
+/* - Border Radius
+------------------------------------------------------------- */ 
+.rounded-6 {
+  border-radius: 3rem;
+}
+.rounded-7 {
+  border-radius: 4rem;
+}
+.rounded-8 {
+  border-radius: 5rem;
+}
+.rounded-9 {
+  border-radius: 6rem;
+}
+.rounded-10 {
+  border-radius: 7rem;
+}
+.rounded-11 {
+  border-radius: 8rem;
+}
+
+/* - Background Color
+------------------------------------------------------------- */ 
+.bg-orange {
+  background-color: var(--bs-orange);
+  opacity: 0.9;
+}
+.bg-white-trans {
+  --bs-bg-opacity: 0.6;
+  background-color: rgba(var(--bs-white-rgb),var(--bs-bg-opacity))!important;
+}
+.bg-gray-2 {
+  background-color: var(--bs-gray-200);
+}
+
+/* Нові варіанти фонів для банера */
+.bg-coffee {
+  background-color: #6B402A; /* темно‑коричневий */
+  color: #ffffff;
+}
+.bg-coffee a { color: #fff; }
+.bg-coffee:hover { background-color: #5a3523; }
+
+.bg-beige {
+  background-color: #F3E9DE; /* бежевий */
+  color: #2B2B2B;
+}
+.bg-beige a { color: inherit; }
+.bg-beige:hover { background-color: #e9dfd3; }
+
+.bg-plainwhite {
+  background-color: #ffffff;
+  color: #2B2B2B;
+}
+.bg-plainwhite a { color: inherit; }
+/* плавні переходи */
+.bg-coffee, .bg-beige, .bg-plainwhite {
+  transition: background-color .18s ease, color .18s ease;
+}
+
+/* - Font Family
+------------------------------------------------------------- */ 
+.heading-font {
+  font-family: var(--heading-font);
+}
+.body-font {
+  font-family: var(--bs-body-font-family);
+}
+
+/* - Display Header
+------------------------------------------------------------- */ 
+@media (min-width: 1200px) {
+  .display-1 {
+     font-size: 4.125rem;
+  }
+ }
+
+/* - Svg Color
+------------------------------------------------------------- */ 
+.svg-primary {
+  fill: var(--bs-primary);
+  color: var(--bs-primary);
+}
+.svg-secondary {
+  fill: var(--bs-secondary);
+  color: var(--bs-secondary);
+}
+.svg-gray-2 {
+  fill: var(--bs-gray-200);
+  color: var(--bs-gray-200);
+}
+.svg-link-color {
+  color: var(--bs-gray-300);
+}
+.svg-link-color:hover {
+  color: var(--bs-primary);
+}
+
+
+/* - Header
+------------------------------------------------------------- */ 
+.offcanvas-body .navbar-nav a.nav-link.active,
+.offcanvas-body .navbar-nav a.nav-link:hover {
+  color: var(--bs-primary);
+}
+
+
+/* - Billboard
+------------------------------------------------------------- */ 
+#intro .pattern-overlay {
+  bottom: 0;
+}
+.content-box {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+/* - Featured Products
+------------------------------------------------------------- */ 
+.product-card .card-detail {
+  width: 60%;
+  right: 0;
+  bottom: -45px;
+  left: 0;
+}
+#featured-products .swiper {
+  overflow-y: visible;
+}
+#featured-products .swiper-pagination {
+  bottom: -60px;
+}
+.swiper-pagination span.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  transition: 0.2s ease-in-out;
+  background: transparent;
+  border: 2px solid var(--bs-gray);
+  opacity: var(--swiper-pagination-bullet-inactive-opacity, 1);
+}
+.swiper-pagination span.swiper-pagination-bullet-active {
+  background-color: var(--bs-primary);
+  border: 2px solid var(--bs-primary);
+}
+
+#featured-products .product-card .cart-concern {
+  bottom: 0;
+  transition: 0.6s ease-in-out;
+  cursor: pointer;
+}
+#featured-products .product-card:hover .cart-concern {
+  bottom: 70px;
+}
+
+
+/* - Testimonials
+------------------------------------------------------------- */ 
+#testimonials .swiper-pagination {
+  bottom: 160px;
+}
+
+
+/* - Overview
+------------------------------------------------------------- */ 
+.video-content .player {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.video-content .player a.play-btn {
+  width: 123px;
+  height: 123px;
+}
+
+
+/* - Subscribe
+------------------------------------------------------------- */ 
+.subscribe-content button.btn-subscribe {
+  right: 10px;
+  bottom: 55px;
+  height: 50px;
+}
+.subscribe-content button:hover {
+  color: var(--bs-primary) !important;
+}
+
+/* - Footer
+------------------------------------------------------------- */ 
+#footer .pattern-overlay {
+  transform: rotate(180deg);
+  top: -60px;
+}
